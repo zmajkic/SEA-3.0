@@ -9,54 +9,72 @@
 <!--   <link href="css/bootstrap.min.css" rel="stylesheet">-->
 
 
-<link rel="stylesheet" href="css/mycss.css"> 
-    <meta charset="UTF-8">					<!-- meta: charset legt fest wie Zeichen interpretiert werden sollen. -->
+<link rel="stylesheet" href="css/mycss.css">
+<meta charset="UTF-8">
+<!-- meta: charset legt fest wie Zeichen interpretiert werden sollen. -->
 <!-- HTML 5. Kann man schließen (XML-konform), muss man aber nicht    -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- meta:  -->
+
+
+
+<script src="javaScript/myscript.js" type="module"></script>
+
+<!--  
+<script>
+	var para = document.getElementById("id4711");
+	para.textContent = 'Erster Paragraph';
+</script>
+-->
+
+
 </head>
 <!-- body: sichtbare Bereich -->
 <body>
 	<h1>Liste der Personen</h1>
 	<!-- h: header -->
-	
-		<table>
-	
-	<table class="table .table">
-		<thead>
-			<tr>
-				<th scope="col">#</th>
-				<th scope="col">Pic</th>
-				<th scope="col">Salutation</th>
-				<th scope="col">First</th>
-				<th scope="col">Last</th>
-			</tr>
-		</thead>
-		<tbody>
+
+	<table>
+		<table class="table .table">
+			<thead>
+				<tr>
+					<th scope="col">#</th>
+					<th scope="col">Pic</th>
+					<th scope="col">Salutation</th>
+					<th scope="col">First</th>
+					<th scope="col">Last</th>
+				</tr>
+			</thead>
+			<tbody>
 
 
-			<tr>
-				<th scope="row">1</th>
-				<td><img src="images/man.png"></td>
-				<td>Herr</td>
-				<td>Mark</td>
-				<td>Otto</td>
-			</tr>
-			<tr>
-				<th scope="row">2</th>
-				<td><img src="images/man.png"></td>
-				<td>Herr</td>
-				<td>Jacob</td>
-				<td>Thornton</td>
-			</tr>
-			<tr>
-				<th scope="row">3</th>
-				<td><img src="images/frau.png"></td>
-				<td>Frau</td>
-				<td>Erika</td>
-				<td>Mustermann</td>
-			</tr>
-		</tbody>
-	</table>
+				<tr>
+					<th scope="row">1</th>
+					<td><img src="images/man.png"></td>
+					<td>Herr</td>
+					<td>Mark</td>
+					<td>Otto</td>
+				</tr>
+				<tr>
+					<th scope="row">2</th>
+					<td><img src="images/man.png"></td>
+					<td>Herr</td>
+					<td>Jacob</td>
+					<td>Thornton</td>
+				</tr>
+				<tr>
+					<th scope="row">3</th>
+					<td><img src="images/frau.png"></td>
+					<td>Frau</td>
+					<td>Erika</td>
+					<td>Mustermann</td>
+				</tr>
+			</tbody>
+		</table>
+		
+		<hr>
+		
+		<div id="id4711"> </div>
+		
 </body>
 </html>
