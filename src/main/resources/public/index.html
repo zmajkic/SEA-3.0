@@ -1,9 +1,8 @@
 <html lang="de">
-<!-- Lang hat keine Besondere Bedeutung außer ggf. für Suchmaschinen oder so.
-<!-- Doppelte oder einfache Anführungsstriche sind ok bei Wertzuweisungen-->
-<!-- head: NICHT-sichtbare Bereich -->
 <head>
 <title>Personen</title>
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+
 <!--  <link rel="stylesheet" href="css/normalize.css"> -->
 <!--     <link rel="stylesheet" href="css/skeleton.css">  -->
 <!--   <link href="css/bootstrap.min.css" rel="stylesheet">-->
@@ -11,11 +10,7 @@
 
 <link rel="stylesheet" href="css/mycss.css">
 <meta charset="UTF-8">
-<!-- meta: charset legt fest wie Zeichen interpretiert werden sollen. -->
-<!-- HTML 5. Kann man schließen (XML-konform), muss man aber nicht    -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- meta:  -->
-
 
 
 <script src="javaScript/myscript.js" type="module"></script>
@@ -31,11 +26,13 @@
 </head>
 <!-- body: sichtbare Bereich -->
 <body>
+
+
 	<h1>Liste der Personen</h1>
 	<!-- h: header -->
 
 	<table>
-		<table class="table .table">
+		<table id="tid001" class="table .table">
 			<thead>
 				<tr>
 					<th scope="col">#</th>
@@ -48,33 +45,31 @@
 			<tbody>
 
 
-				<tr>
-					<th scope="row">1</th>
-					<td><img src="images/man.png"></td>
-					<td>Herr</td>
-					<td>Mark</td>
-					<td>Otto</td>
-				</tr>
-				<tr>
-					<th scope="row">2</th>
-					<td><img src="images/man.png"></td>
-					<td>Herr</td>
-					<td>Jacob</td>
-					<td>Thornton</td>
-				</tr>
-				<tr>
-					<th scope="row">3</th>
-					<td><img src="images/frau.png"></td>
-					<td>Frau</td>
-					<td  id="id4712">Erika</td>
-					<td>M</td>
-				</tr>
 			</tbody>
 		</table>
+	<hr>
+		<article class="forecast">
+			<h5>Join us!</h5>
+
+				<form id="submit" >
+					<label for="vorname">First name:</label>
+					<br> 
+					<input type="text" id="vorname" name="vorname">
+					<br> 
+					<label for="nachname">Last name:</label>
+					<br> 
+					<input type="text" id="nachname" name="nachname">
+					<br>
+					<label for="anrede">Salutation:</label>
+					<br> 
+					<input type="text" id="anrede" name="anrede">
+					<br>
+					<input id="button" type="submit" value="Submit">
+				</form>
 		
+		</article>
+
+
 		<hr>
-		
-		<div id="id4711"> </div>
-		
 </body>
 </html>

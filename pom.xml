@@ -4,11 +4,19 @@
     <artifactId>SEA-3.0</artifactId>
     <version>1.0</version>
     <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-parent -->
-    <parent>
+    <parent>   
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.5.0</version>
     </parent>
+    
+    <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+     <maven.compiler.source>11</maven.compiler.source>
+     <maven.compiler.target>${maven.compiler.source}</maven.compiler.target>
+    </properties>
+    
+    
     <dependencies>
          <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web -->
          <dependency>
@@ -20,6 +28,7 @@
              <artifactId>spring-boot-starter</artifactId>
          </dependency>
     </dependencies>
+    
  <build>
     <plugins>
         <plugin>
@@ -28,4 +37,5 @@
         </plugin>
     </plugins>
  </build>
+ 
 </project>
