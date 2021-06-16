@@ -35,11 +35,16 @@
 		<table id="tid001" class="table .table">
 			<thead>
 				<tr>
-					<th scope="col">#</th>
-					<th scope="col">Pic</th>
-					<th scope="col">Salutation</th>
-					<th scope="col">First</th>
-					<th scope="col">Last</th>
+					<th scope="col">Nr.:</th>
+					<th scope="col">Bild:</th>
+					<th scope="col">Id.:</th>	
+					<th scope="col">Vorname:</th>
+					<th scope="col">Nachname:</th>
+					<th scope="col">Strasse:</th>		
+					<th scope="col">Hausnummer:</th>
+					<th scope="col">PLZ:</th>			
+					<th scope="col">Ort:</th>						
+					<th scope="col">E-Mail:</th>	
 				</tr>
 			</thead>
 			<tbody>
@@ -49,27 +54,46 @@
 		</table>
 	<hr>
 		<article class="forecast">
-			<h5>Join us!</h5>
+			<h5>Eintragen:</h5>
 
-				<form id="submit" >
-					<label for="vorname">First name:</label>
-					<br> 
-					<input type="text" id="vorname" name="vorname">
-					<br> 
-					<label for="nachname">Last name:</label>
-					<br> 
-					<input type="text" id="nachname" name="nachname">
+			<form id="submit">
+				<label for="anrede">Anrede:</label><br>
+					<select name="anrede" id="anrede">
+						<option value="Auswahl">Bitte wählen Sie</option>
+						<option value="mr">Herr</option>
+						<option value="miss">Frau</option>
+						<option value="other">Divers</option>
+					</select>
 					<br>
-					<label for="anrede">Salutation:</label>
-					<br> 
-					<input type="text" id="anrede" name="anrede">
-					<br>
-					<input id="button" type="submit" value="Submit">
-				</form>
-		
+				<label for="id">ID:</label> <br> 
+				<input id="id" type="text" name="id"> <br> 
+				<label for="vorname">Vorname:</label> <br> 
+				<input id="vorname" type="text" name="vorname"> <br> 
+				<label for="nachname">Nachname:</label> <br> 
+				<input id="nachname" type="text" name="nachname"> <br> 
+				<label for="str">Strasse:</label> <br> 
+				<input type="text" id="str" name="str">	<br>
+				<label for="hausnr">HausNr.:</label> <br> 
+				<input type="text" id="hausnr" name="hausnr"> <br>
+				<label for="plz">Postleitzahl:</label> <br> 
+				<input type="text" id="plz" name="plz"> <br>
+				<label for="ort">Ort:</label> <br> 
+				<input type="text" id="ort" name="ort"> <br>		
+				<label for="email">E-Mail:</label> <br> 
+				<input type="text" id="email" name="email"> <br>
+				<br>
+				<input id="button" type="submit"  value="Submit">
+				<br>
+				<input id="delbutton" type="submit"  value="Delete">				
+				
+			</form>
 		</article>
+	</hr>
+	
+	
 
 
-		<hr>
+
+	
 </body>
 </html>
