@@ -61,7 +61,7 @@ function oninputclick(event) {
 
 
 	console.log(jsondata);
-	fetch("http://localhost:8080/json/person", {
+	fetch("/json/person", {
 		method: 'POST', // or 'PUT'
 		body: jsondata,
 		headers: {
@@ -80,7 +80,7 @@ function oninputdelclick(event) {
 	var id = document.getElementById("id").value;
 	console.log(id);
 
-	fetch(`http://localhost:8080/json/person/${id}`, {  // Backtick
+	fetch(`/json/person/${id}`, {  // Backtick
 		method: 'DELETE'
 	});
 }
@@ -91,7 +91,7 @@ var inputdel = document.getElementById("delbutton");
 inputdel.addEventListener("click", oninputdelclick);
 
 
-fetch("http://localhost:8080/json/persons/all")
+fetch("/json/persons/all")
 	.then(getJson) 								//  entspricht: .then( irgendwas => irgendwas.json() )
 	.then(getTxtFromJsonUndPackInsHTML) 		// entpricht: cell.textContent = myjson.personen[0].vorname);
 
