@@ -95,3 +95,10 @@ fetch("http://localhost:8080/json/persons/all")
 	.then(getJson) 								//  entspricht: .then( irgendwas => irgendwas.json() )
 	.then(getTxtFromJsonUndPackInsHTML) 		// entpricht: cell.textContent = myjson.personen[0].vorname);
 
+
+.then(resetTable);
+
+		function resetTable() {
+		var tb = document.getElementById("tbody1");
+		tb.innerHTML="";		
+	}
