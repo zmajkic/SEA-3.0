@@ -27,7 +27,7 @@ function getTxtFromJsonUndPackInsHTML(myjson) {
 function getIcon(anrede) {
 	switch (anrede) {
 		case "Herr":
-			return 'images/man.png'
+			return 'images/mann.png'
 		case "Frau":
 			return 'images/frau.png'
 		default:
