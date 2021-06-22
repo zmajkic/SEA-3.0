@@ -29,7 +29,7 @@ public class PersonService {
 
 	public Person get(int id) {
 		
-		return new Person( "id",  "vorname",  "nachname",  "anrede",  "str",  "hausnr",  "plz",
+		return new Person( id,  "vorname",  "nachname",  "anrede",  "str",  "hausnr",  "plz",
 				 "ort",  "email");
 	}
 
