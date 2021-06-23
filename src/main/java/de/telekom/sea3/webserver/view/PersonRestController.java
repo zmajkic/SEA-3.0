@@ -33,12 +33,12 @@ public class PersonRestController {
 	}
 	
 	@GetMapping("/json/persons/size")
-	public Size getSize() {
-		return new Size(personService.getSize());
+	public Long getSize() {
+		return personService.getSize();
 	}
 	
 	@GetMapping("/json/person/{id}")	// {id} anstelle einer festen ID z.B. 42
-	public Person getPerson(@PathVariable("id") int id) {
+	public Person getPerson(@PathVariable("id") Long id) {
 		return personService.get(id);
 	}
 	
@@ -49,7 +49,7 @@ public class PersonRestController {
 	
 		
 	@DeleteMapping("/json/person/{id}")	// {id} anstelle einer festen ID z.B. 42
-	public Person delPerson(@PathVariable("id") String id) {
+	public Person delPerson(@PathVariable("id") Long id) {
 		return personService.del(id);
 	}
 	

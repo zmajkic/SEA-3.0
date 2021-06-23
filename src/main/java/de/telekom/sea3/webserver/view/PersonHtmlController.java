@@ -7,8 +7,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+
 import de.telekom.sea3.webserver.model.Personen;
 import de.telekom.sea3.webserver.service.PersonService;
+
 
 @Controller
 public class PersonHtmlController {
@@ -34,13 +36,6 @@ public class PersonHtmlController {
 		return string5;
 	}
 
-	
-	
-	
-	
-	
-	
-	
 	
 	// URL:"http://localhost:8080/count"
 	@GetMapping("/count")

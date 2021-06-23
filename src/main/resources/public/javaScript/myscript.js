@@ -15,11 +15,13 @@ function getTxtFromJsonUndPackInsHTML(myjson) {
 			+ "<td>" + laufvariable.id + "</td>"
 			+ "<td>" + laufvariable.vorname + "</td>"
 			+ "<td>" + laufvariable.nachname + "</td>"
+			+ "<td>" + laufvariable.bday + "</td>"
 			+ "<td>" + laufvariable.str + "</td>"
 			+ "<td>" + laufvariable.hausnr + "</td>"
 			+ "<td>" + laufvariable.plz + "</td>"
 			+ "<td>" + laufvariable.ort + "</td>"
 			+ "<td>" + laufvariable.email + "</td>"
+			+ "<td>" + laufvariable.version + "</td>"
 			+ "</tr>")
 	}
 }
@@ -46,6 +48,8 @@ function oninputclick(event) {
 	console.log(vorname);
 	var nachname = document.getElementById("nachname").value;
 	console.log(nachname);
+	var bday = document.getElementById("bday").value;
+	console.log(bday);
 	var str = document.getElementById("str").value;
 	console.log(str);
 	var hausnr = document.getElementById("hausnr").value;
@@ -56,9 +60,9 @@ function oninputclick(event) {
 	console.log(ort);
 	var email = document.getElementById("email").value;
 	console.log(email);
-	var jsondata = `{"id": "${id}", "anrede": "${anrede}", "vorname": "${vorname}", "nachname": "${nachname}", "str": "${str}","hausnr": "${hausnr}","plz": "${plz}","ort": "${ort}","email": "${email}"}`;
-
-
+	var version = document.getElementById("version").value;
+	console.log(version);
+	var jsondata = `{"id": "${id}", "anrede": "${anrede}", "vorname": "${vorname}", "nachname": "${nachname}", "bday": "${bday}", "str": "${str}","hausnr": "${hausnr}","plz": "${plz}","ort": "${ort}","email": "${email}","version": "${version}"}`;
 
 	console.log(jsondata);
 	fetch("/json/person", {
@@ -96,9 +100,9 @@ fetch("/json/persons/all")
 	.then(getTxtFromJsonUndPackInsHTML) 		// entpricht: cell.textContent = myjson.personen[0].vorname);
 
 
-.then(resetTable);
+	.then(resetTable);
 
-		function resetTable() {
-		var tb = document.getElementById("tbody1");
-		tb.innerHTML="";		
-	}
+function resetTable() {
+	var tb = document.getElementById("tbody1");
+	tb.innerHTML = "";
+}
