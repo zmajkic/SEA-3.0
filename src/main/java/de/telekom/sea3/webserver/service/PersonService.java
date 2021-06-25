@@ -9,17 +9,28 @@ import org.springframework.stereotype.Service;
 import de.telekom.sea3.webserver.repo.PersonRepository;
 import de.telekom.sea3.webserver.model.*;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+
+
 @Service
 public class PersonService {
 
 	private PersonRepository personRepository;
-
+	Logger logger = LoggerFactory.getLogger(this.getClass());
+	
+	
 	@Autowired
 	public PersonService(PersonRepository personRepository) {
 		super();
 		System.out.println("PersonService instanziert: " + this.toString());
 		System.out.println("PersonRepository: " + personRepository.toString());
 		this.personRepository = personRepository;
+		
+		logger.info(String.format("[INFO] PersonService instanziiert: %s", this.toString()));
+		logger.info(String.format("[INFO] PersonRepository durch Annotation instanziiert: %s", personRepository.toString()));
+        logger.info("PersonService ist gestartet");
 	}
 
 	public Long getSize() {
@@ -67,5 +78,20 @@ public class PersonService {
 		System.out.println("Person wurde gelöscht!");
 		return null;
 	}
+	
+	
+
+	public Personen selectPersonen(String ort) {
+		Personen ps = new Personen();
+		for (Person p : personRepository.selectPersonen(ort)) {
+			ps.getPersonen().add(p);
+		}
+		return ps;
+	}
+
+	
+	
+	
+	
 
 }

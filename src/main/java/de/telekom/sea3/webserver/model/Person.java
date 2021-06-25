@@ -10,6 +10,7 @@ import javax.persistence.Table;
 
 
 
+
 @Entity  // entspricht der "Zeile" in der Datenbanktabelle
 @Table(name="persons")
 
@@ -20,7 +21,7 @@ public class Person {
 	private Long id;
 	@Version
 	private Long version;
-	
+
 	@Column
 	private String anrede;
 	@Column
